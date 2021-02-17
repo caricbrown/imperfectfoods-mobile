@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-    Button,
     SafeAreaView, StatusBar, StyleSheet, Text
 } from 'react-native';
+import { Button } from './components/Button/Button';
 
 const GetStartedScreen = ({ navigation }) => {
     return (
@@ -10,7 +10,7 @@ const GetStartedScreen = ({ navigation }) => {
             <StatusBar barStyle="dark-content" />
             <SafeAreaView>
                 <Text>GetStartedScreen</Text>
-                <Button onPress={() => navigation.navigate('VerifyService')} title='Get Started' />
+                <Button onPress={() => navigation.navigate('VerifyService')} testID='GET_STARTED' title='Get Started' />
             </SafeAreaView>
         </>
     );

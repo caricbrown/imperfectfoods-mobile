@@ -1,10 +1,20 @@
+import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
 import {
     SafeAreaView, StatusBar, StyleSheet, Text
 } from 'react-native';
 import { Button } from './components/Button/Button';
 
-const GetStartedScreen = ({ navigation }) => {
+type StackParamList = {
+    GetStarted: undefined;
+    VerifyService: undefined;
+};
+
+type ScreenProps = {
+    navigation: StackNavigationProp<StackParamList, 'GetStarted'>;
+}
+
+const GetStartedScreen = ({ navigation }: ScreenProps) => {
     return (
         <>
             <StatusBar barStyle="dark-content" />

@@ -1,8 +1,8 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { Colors } from './colors';
-import GetStartedScreen from './screens/GetStartedScreen';
-import VerifyServiceScreen from './screens/VerifyServiceScreen';
+import GetStartedScreen from './screens/get-started/GetStartedScreen';
+import VerifyServiceScreen from './screens/verify-service/VerifyServiceScreen';
 
 const Stack = createStackNavigator();
 
@@ -14,12 +14,11 @@ const Root = () => {
                 headerTitleStyle: {
                     fontWeight: 'bold',
                 },
-            }}
-        >
+            }}>
             <Stack.Screen
                 name="GetStarted"
                 component={GetStartedScreen}
-                options={{ headerShown: false }}
+                options={{ headerShown: false, title: '' }}
             />
             <Stack.Screen
                 name="VerifyService"

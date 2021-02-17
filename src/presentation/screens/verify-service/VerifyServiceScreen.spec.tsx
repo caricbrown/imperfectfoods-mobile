@@ -1,6 +1,6 @@
 import { TestIDs } from 'presentation/testIDs';
 import React from 'react';
-import { renderWithReactQuery } from './testUtils';
+import { renderWithReactQuery } from '../testUtils';
 import VerifyServiceScreen from './VerifyServiceScreen';
 
 describe('VerifyServiceScreen', () => {
@@ -14,7 +14,9 @@ describe('VerifyServiceScreen', () => {
         const { getByText } = renderWithReactQuery(
             <VerifyServiceScreen />
         );
-        expect(getByText(/Enter your zip code to see if we deliver in your area/i));
+        const title = getByText(/Enter your zip code to see if we deliver in your area/i);
+        expect(title);
+        expect(title).toHaveStyle({ fontSize: 40, fontWeight: '800', marginTop: 24, textAlign: 'center', });
     });
     it('renders text input', () => {
         const { getByPlaceholderText } = renderWithReactQuery(
@@ -26,6 +28,8 @@ describe('VerifyServiceScreen', () => {
         const { getByText } = renderWithReactQuery(
             <VerifyServiceScreen />
         );
-        expect(getByText(/go/i));
+        const button = getByText(/go/i);
+        expect(button);
+        expect(button).toBeDisabled();
     });
 });

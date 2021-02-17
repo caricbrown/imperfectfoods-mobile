@@ -11,7 +11,7 @@ import { styles } from './VerifyServiceScreen.styles';
 
 const VerifyServiceScreen = () => {
     const [postalCode, setPostalCode] = useState<string>('');
-    const { mutateAsync } = useVerifyZipcode();
+    const { mutateAsync, status } = useVerifyZipcode();
     return (
         <>
             <StatusBar barStyle="dark-content" />
@@ -20,12 +20,12 @@ const VerifyServiceScreen = () => {
                     <KeyboardAvoidingView behavior={'position'} style={styles.container}>
                         <View style={styles.innerContainer}>
                             <ThreeAvocados />
-                            <Text style={styles.header}>Enter your zip code to see if we deliver in your area.</Text>
+                            <Text style={styles.title}>Enter your zip code to see if we deliver in your area.</Text>
                             <TextInput
                                 onChangeText={text => setPostalCode(text)}
                                 placeholder='Enter your zipcode'
                                 style={styles.input} />
-                            <PrimaryButton onPress={() => mutateAsync(postalCode)} title='Go' testID={TestIDs.goButton} />
+                            <PrimaryButton disabled={postalCode.length <= 0} onPress={() => mutateAsync(postalCode)} title='Go' testID={TestIDs.goButton} />
                         </View>
                     </KeyboardAvoidingView>
                 </View>

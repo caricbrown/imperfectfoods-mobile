@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     maxWidth: 340,
     padding: 24,
   },
-  header: {
+  title: {
     fontSize: 40,
     fontWeight: '800',
     marginTop: 24,

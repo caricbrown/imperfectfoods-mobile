@@ -1,4 +1,3 @@
-import { Colors } from 'presentation/colors';
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
@@ -7,26 +6,21 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-evenly',
   },
-  box: {
+  innerContainer: {
     alignItems: 'center',
     backgroundColor: 'white',
     borderRadius: 6,
+    justifyContent: 'space-between',
     maxWidth: 340,
     padding: 24,
   },
-  text1: {
-    color: Colors.teal,
+  header: {
     fontSize: 40,
     fontWeight: '800',
+    marginTop: 24,
     textAlign: 'center',
-    textTransform: 'uppercase',
   },
-  text2: {
-    color: Colors.darkTeal,
-    fontSize: 30,
-    fontWeight: '800',
-    marginTop: 16,
-    textAlign: 'center',
-    textTransform: 'uppercase',
-  },
+  input: {
+    padding: 32,
+  }
 });

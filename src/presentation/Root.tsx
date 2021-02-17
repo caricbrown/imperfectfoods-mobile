@@ -21,7 +21,10 @@ const Root = () => {
                 component={GetStartedScreen}
                 options={{ headerShown: false }}
             />
-            <Stack.Screen name="VerifyService" component={VerifyServiceScreen} />
+            <Stack.Screen
+                name="VerifyService"
+                component={VerifyServiceScreen}
+                options={{ title: '' }} />
         </Stack.Navigator>
     );
 };

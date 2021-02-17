@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+    Button,
     SafeAreaView, StatusBar, StyleSheet, Text
 } from 'react-native';
 
@@ -8,7 +9,8 @@ const Home = () => {
         <>
             <StatusBar barStyle="dark-content" />
             <SafeAreaView>
-                <Text>Get Started</Text>
+                <Text>Home</Text>
+                <Button onPress={() => {}} title='Get Started' />
             </SafeAreaView>
         </>
     );

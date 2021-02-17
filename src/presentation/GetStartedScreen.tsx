@@ -4,13 +4,13 @@ import {
     SafeAreaView, StatusBar, StyleSheet, Text
 } from 'react-native';
 
-const Home = () => {
+const GetStartedScreen = ({ navigation }) => {
     return (
         <>
             <StatusBar barStyle="dark-content" />
             <SafeAreaView>
-                <Text>Home</Text>
-                <Button onPress={() => {}} title='Get Started' />
+                <Text>GetStartedScreen</Text>
+                <Button onPress={() => navigation.navigate('VerifyService')} title='Get Started' />
             </SafeAreaView>
         </>
     );
@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
 
 });
 
-export default Home;
+export default GetStartedScreen;

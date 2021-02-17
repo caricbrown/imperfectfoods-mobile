@@ -1,13 +1,16 @@
+import { NavigationContainer } from '@react-navigation/native';
+import Root from 'presentation/Root';
 import React from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import Home from './src/presentation/Home';
 
 const queryClient = new QueryClient();
 
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <Home />
+      <NavigationContainer>
+        <Root />
+      </NavigationContainer>
     </QueryClientProvider>
   );
 };

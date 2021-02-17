@@ -3,7 +3,7 @@ import { Text, TouchableOpacity } from 'react-native';
 import { styles } from './PrimaryButton.styles';
 
 type PrimaryButtonProps = {
-    disabled: boolean;
+    disabled?: boolean;
     onPress: () => void;
     testID: string;
     title: string;

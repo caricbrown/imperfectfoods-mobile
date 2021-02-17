@@ -1,6 +1,6 @@
 import { StackNavigationProp } from '@react-navigation/stack';
-import { LogoTitle } from 'presentation/components/LogoTitle/LogoTitle';
-import { PrimaryButton } from 'presentation/components/PrimaryButton/PrimaryButton';
+import { LogoTitle } from 'presentation/components/LogoTitle';
+import { PrimaryButton } from 'presentation/components/primary-button/PrimaryButton';
 import React from 'react';
 import {
     SafeAreaView, StatusBar, Text, View

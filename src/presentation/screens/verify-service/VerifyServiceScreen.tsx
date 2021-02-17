@@ -1,5 +1,5 @@
 import { useVerifyZipcode } from 'domain/useVerifyZipcode';
-import { PrimaryButton } from 'presentation/components/PrimaryButton/PrimaryButton';
+import { PrimaryButton } from 'presentation/components/primary-button/PrimaryButton';
 import { ThreeAvocados } from 'presentation/components/ThreeAvocados';
 import { TestIDs } from 'presentation/testIDs';
 import React, { useState } from 'react';

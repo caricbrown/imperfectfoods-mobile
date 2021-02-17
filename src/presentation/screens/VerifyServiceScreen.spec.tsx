@@ -1,9 +1,10 @@
 import { render } from '@testing-library/react-native';
 import React from 'react';
+import { renderWithReactQuery } from './testUtils';
 import VerifyServiceScreen from './VerifyServiceScreen';
 
 describe('VerifyServiceScreen', () => {
-    const { getByText } = render(
+    const { getByText } = renderWithReactQuery(
         <VerifyServiceScreen />
     );
     it('renders title', () => {

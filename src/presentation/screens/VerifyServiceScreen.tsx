@@ -1,3 +1,4 @@
+import { useVerifyZipcode } from 'domain/useVerifyZipcode';
 import React from 'react';
 import {
     Button,
@@ -5,7 +6,7 @@ import {
 } from 'react-native';
 
 const VerifyServiceScreen = () => {
-    // const { mutateAsync } = useVerifyZipcode();
+    const { mutateAsync } = useVerifyZipcode();
 
     return (
         <>
@@ -13,14 +14,10 @@ const VerifyServiceScreen = () => {
             <SafeAreaView>
                 <Text>Enter your zip code to see if we deliver in your area.</Text>
                 <TextInput placeholder='Enter your zipcode' />
-                <Button onPress={() => { }} title='Go' />
+                <Button onPress={() => mutateAsync('97405')} title='Go' />
             </SafeAreaView>
         </>
     );
 };
-
-const styles = StyleSheet.create({
-
-});
 
 export default VerifyServiceScreen;

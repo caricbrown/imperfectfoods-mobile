@@ -25,7 +25,7 @@ const VerifyServiceScreen = () => {
                                 onChangeText={text => setPostalCode(text)}
                                 placeholder='Enter your zipcode'
                                 style={styles.input} />
-                            <PrimaryButton disabled={postalCode.length <= 0} onPress={() => mutateAsync(postalCode)} title='Go' testID={TestIDs.goButton} />
+                            <PrimaryButton disabled={postalCode.length <= 0 || status === 'loading'} onPress={() => mutateAsync(postalCode)} title='Go' testID={TestIDs.goButton} />
                         </View>
                     </KeyboardAvoidingView>
                 </View>

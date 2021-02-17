@@ -1,10 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { render } from '@testing-library/react-native';
+import { fireEvent, render, waitFor } from '@testing-library/react-native';
 import React from 'react';
 import Root from './Root';
-
-// Silence the warning https://github.com/facebook/react-native/issues/11094#issuecomment-263240420
-jest.mock('react-native/Libraries/Animated/src/NativeAnimatedHelper');
 
 describe('Root', () => {
     const root = (
@@ -12,8 +9,17 @@ describe('Root', () => {
             <Root />
         </NavigationContainer>
     );
-    const { findByText, findAllByText } = render(root);
-    it('renders Get Started', () => {
-        expect(findByText(/Get Started/i));
+    it('renders Get Started', async () => {
+        const { getByText } = render(root);
+
+        expect(getByText(/Get Started/i));
+    });
+    it('navigates', async () => {
+        const { getByText } = render(root);
+
+        fireEvent.press(getByText(/Get Started/i));
+        await waitFor(() => {
+            expect(getByText(/Enter your zip code/i));
+        });
     });
 });

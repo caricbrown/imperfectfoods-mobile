@@ -1,15 +1,14 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
-import { LogoTitle } from './components/LogoTitle/LogoTitle';
-import GetStartedScreen from './GetStartedScreen';
-import VerifyServiceScreen from './VerifyServiceScreen';
+import GetStartedScreen from './screens/GetStartedScreen';
+import VerifyServiceScreen from './screens/VerifyServiceScreen';
 
 const Stack = createStackNavigator();
 
 const Root = () => {
     return (
         <Stack.Navigator>
-            <Stack.Screen name="GetStarted" component={GetStartedScreen} options={{ headerTitle: () => <LogoTitle /> }} />
+            <Stack.Screen name="GetStarted" component={GetStartedScreen} />
             <Stack.Screen name="VerifyService" component={VerifyServiceScreen} />
         </Stack.Navigator>
     );

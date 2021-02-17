@@ -3,10 +3,12 @@ import React from 'react';
 import GetStartedScreen from './GetStartedScreen';
 
 describe('GetStartedScreen', () => {
-    const { getByText } = render(
-        <GetStartedScreen />
-    );
     it('renders Get Started', () => {
-        expect(getByText(/Get Started/i));
+        const { getByText } = render(
+            <GetStartedScreen />
+        );
+        expect(getByText(/Sustainable/i));
+        expect(getByText(/Delivered weekly/i));
+        expect(getByText(/Get started/i));
     });
 });
